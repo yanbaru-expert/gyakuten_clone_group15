@@ -6,7 +6,6 @@ ja:
       comment: "コメント"
       movie: "動画"
       question: "質問"
-      user: "ユーザー"
     attributes:
       admin_user:
         email: "メール"
@@ -15,9 +14,6 @@ ja:
       question:
         title: "タイトル"
         detail: "内容"
-      user:
-        name: "名前"
-        age: "年齢"
       aws_text:
         title: "タイトル"
         content: "内容"
