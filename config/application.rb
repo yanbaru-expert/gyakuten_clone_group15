@@ -20,7 +20,6 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 module GyakutenCloneGroup
-
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
@@ -34,7 +33,6 @@ module GyakutenCloneGroup
     config.generators.system_tests = nil
 
     config.autoload_paths << Rails.root.join("lib")
-
 
   end
 end
