@@ -1,7 +1,16 @@
 @import "bootstrap/scss/bootstrap";
 
+.alert-notice {
+    @extend .alert-info;
+  }
+  
+  .alert-alert {
+    @extend .alert-danger;
+  }
+
 .container-login {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
 }
+
