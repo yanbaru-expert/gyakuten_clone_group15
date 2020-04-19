@@ -11,54 +11,54 @@
           Rails
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/">動画教材</a>
+          <%= link_to "動画教材", root_path %>
           <a class="dropdown-item" href="#">テキスト教材</a>
           <a class="dropdown-item" href="#">ライブコーディング</a>
           <a class="dropdown-item" href="#">質問集</a>
         </div>
+      </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" href="#">AWS講座</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">PHP講座</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">対談</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">情報発信</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">動画編集講座</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ライティング講座</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">LINE@</a>
+      </li>
+
+      <% if user_signed_in? %>
         <li class="nav-item active">
-          <a class="nav-link" href="#">AWS講座</a>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item active">
+          <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">PHP講座</a>
+          <%= link_to "ログイン", new_user_session_path, class: 'nav-link' %>
         </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">対談</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">情報発信</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">動画編集講座</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">ライティング講座</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">LINE@</a>
-        </li>
-
-        <% if user_signed_in? %>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/sign_out"  data-method="delete">ログアウト</a>
-        </li>
-        <% else %>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/sign_up">新規登録</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/sign_in">ログイン</a>
-        </li>
-        <% end %>
-
-      </ul>
-    </div>
-  </nav>
+      <% end %>
+    </ul>
+  </div>
+</nav>
