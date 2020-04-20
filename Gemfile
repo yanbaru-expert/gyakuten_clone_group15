@@ -15,6 +15,11 @@ gem 'activeadmin'
 gem 'devise'
 gem 'rails-i18n'
 
+gem 'devise'
+
+gem 'devise-i18n'
+gem 'devise-bootstrap-views'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
