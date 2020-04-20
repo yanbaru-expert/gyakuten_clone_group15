@@ -5,7 +5,12 @@ namespace :import_csv do
   desc "aws_text_dataをインポートするタスク"
 
   task aws_texts: :environment do
-    path = File.join Rails.root, "db/csv_data/aws_text_data.csv"
     Import.csv_data(path: "db/csv_data/aws_text_data.csv")
+    CSV.foreach(path, headers: true) do |row|
+      list << {
+          title: row["title"],
+          content: row["content"]
+      }
+    end
   end
 end
