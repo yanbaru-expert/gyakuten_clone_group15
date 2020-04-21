@@ -1,5 +1,3 @@
-require 'csv'
-
 namespace :import_csv do
   # rails import_csv:aws_texts
   desc "aws_text_dataをインポートするタスク"
