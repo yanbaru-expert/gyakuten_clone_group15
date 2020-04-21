@@ -1,6 +1,7 @@
 # CSVファイルを扱うときは次が必要
 require "csv"
 
+require './lib/import'
 class Import
   def self.csv_data(path:)
     # CSVファイルの（１行目をキーとして）各行のデータを配列に格納する
