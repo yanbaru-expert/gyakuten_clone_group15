@@ -3,7 +3,7 @@
 .alert-notice {
     @extend .alert-info;
   }
-  
+
   .alert-alert {
     @extend .alert-danger;
   }
@@ -14,3 +14,8 @@
   padding: 2rem;
 }
 
+.container {
+  width: 680px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
