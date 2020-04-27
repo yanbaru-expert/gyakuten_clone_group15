@@ -4,9 +4,9 @@
     @extend .alert-info;
   }
 
-  .alert-alert {
-    @extend .alert-danger;
-  }
+.alert-alert {
+  @extend .alert-danger;
+}
 
 .container-login {
   @extend .container-fluid;
