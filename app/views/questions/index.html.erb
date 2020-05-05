@@ -3,11 +3,11 @@
   <h2>新規投稿</h2>
   <div class="form-group">
     <%= f.label :title, "【質問】" %>
-    <%= f.text_area :body, rows: 4, class: "form-control initial-height" %>
+    <%= f.text_area :title, rows: 4, class: "form-control initial-height" %>
   </div>
   <div class="form-group">
-    <%= f.label :details, "【詳細】" %>
-    <%= f.text_area :body, rows: 5, class: "form-control initial-height" %>
+    <%= f.label :detail, "【詳細】" %>
+    <%= f.text_area :detail, rows: 5, class: "form-control initial-height" %>
   </div>
   <%= f.submit "送信", data: { confirm: "新規投稿しますか？" }, class: "btn btn-primary btn-block btn-lg" %>
 </div>

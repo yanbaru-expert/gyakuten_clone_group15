@@ -5,8 +5,13 @@ class QuestionsController < ApplicationController
     end
 
     def create
-      @questions = Question.new(question_params)
-      redirect_to questions_path
+      @questions = Question.all
+      @question = Question.new(question_params)
+        if @question.save
+          redirect_to questions_path
+        else
+          render :index
+        end
     end
 
     private
