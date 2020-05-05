@@ -5,11 +5,12 @@ class QuestionsController < ApplicationController
     end
 
     def create
-      @questions = Question.all
       @question = Question.new(question_params)
         if @question.save
-          redirect_to questions_path
+          redirect_to questions_path, notice: "投稿完了しました。"
         else
+          flash.now[:alert] = "投稿に失敗しました。"
+          @questions = Question.all
           render :index
         end
     end
