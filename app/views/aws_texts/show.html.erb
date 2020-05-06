@@ -1,0 +1,7 @@
+<div class="container" >
+    <div class="center-text" >
+        <h2 id="awstext"><%= @awstext.title %></h2>
+        <% text = @awstext.content %>
+        <%= markdown(text).html_safe %>
+    </div>
+</div>
