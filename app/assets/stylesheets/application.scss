@@ -4,20 +4,14 @@
     @extend .alert-info;
   }
 
-  .alert-alert {
-    @extend .alert-danger;
-  }
+.alert-alert {
+  @extend .alert-danger;
+}
 
 .container-login {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
-}
-
-.container p {
-  width: 680px;
-  margin: 0 auto;
-  padding-bottom: 15px;
 }
 
 .table {
@@ -28,4 +22,40 @@
 
 table .w-1 {
   width: 10%;
+}
+
+.container {
+  width: 680px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.question-container {
+  padding: 30px 0;
+}
+
+.question-text {
+  margin-left: -15px
+}
+
+#questions a {
+  text-decoration: none;
+  display: block;
+  color: #333333;
+  border: solid 2px #505050;
+  border-radius: 10px;
+  transition: .4s;
+  margin: 30px 0;
+}
+
+#questions .question{
+  padding: 10px;
+}
+
+.center-text {
+	text-align: left;
+	display: inline-block;
+}
+#awstext {
+  margin: 40px 0;
 }
