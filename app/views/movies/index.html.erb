@@ -1,8 +1,9 @@
 <div class="text-center my-4">
-    <% @movies.each.with_index(1) do |movie, i| %>
+    <% @movies.each.with_index((@movies.current_page - 1) * 10 + 1) do |movie, i| %>
         <div class="mt-5">
         <p><%="Lv.#{i}：#{movie.title}"%></p>
         </div>
         <iframe width="560" height="315" src="<%=movie.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% end %>
+   <div class = "mx-auto" style = "width: 200px;"><%= paginate @movies %></div>
 </div>

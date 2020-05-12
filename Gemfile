@@ -15,8 +15,12 @@ gem 'activeadmin'
 gem 'devise'
 gem 'rails-i18n'
 
+
+gem 'kaminari'
+
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
+
 
 gem 'devise'
 
