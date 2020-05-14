@@ -1,0 +1,10 @@
+<div class="container" >
+    <div class="center-text" >
+        <h3>【質問】</h3>
+        <% title = @question.title %>
+        <%= markdown(title).html_safe %>
+        <h3>【詳細】</h3>
+        <% detail = @question.detail %>
+        <%= markdown(detail).html_safe %>
+    </div>
+</div>

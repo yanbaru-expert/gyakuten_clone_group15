@@ -17,17 +17,17 @@
   <div class="container">
     <div class="question-container">
       <% @questions.each do |question| %>
-      <a href="">
-        <div class="question">
-          <div class="question-text">
-            <div class="col-md-7">
-              <p class="title">
-                <%= question.title %>
-              </p>
+        <a href="/questions/<%= question.id%>">
+          <div class="question">
+            <div class="question-text">
+              <div class="col-md-7">
+                <p class="title">
+                  <%= question.title %>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
       <% end %>
     </div>
   </div>
