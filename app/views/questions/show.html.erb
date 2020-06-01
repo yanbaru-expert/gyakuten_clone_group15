@@ -9,15 +9,14 @@
     </div>
 
     <h3>【回答】</h3>
-    <% if @question.solutions.any?%>
         <ul>
             <% @question.solutions.each do |solution| %>
                 <li>
-                    <%= solution.answer %>
+                    <% answer = solution.answer %>
+                    <%= markdown(answer).html_safe %>
                 </li>
             <% end%>
         </ul>
-    <% end %>
 
     <%= form_with model: [@question, @question.solutions.build], local: true do |f| %>
         <div class="form-group">
