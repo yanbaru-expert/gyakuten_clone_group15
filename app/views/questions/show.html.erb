@@ -7,4 +7,22 @@
         <% detail = @question.detail %>
         <%= markdown(detail).html_safe %>
     </div>
+
+    <h3>回答投稿</h3>
+            <% @question.solutions.each.with_index(1) do |solution, i| %>
+                <div class="answer-text">
+                <p>【回答<%=i%>】</p>
+                    <% answer = solution.answer %>
+                   <p> <%= markdown(answer).html_safe %> </p>
+                </div>
+            <% end%>
+
+    <%= form_with model: [@question, @question.solutions.build], local: true do |f| %>
+        <div class="form-group">
+            <%= f.label :title, "【回答】" %>
+            <%= f.text_area :answer, rows: 4, class: "form-control initial-height"%>
+        </div>
+            <%= f.submit "送信", data: { confirm: "投稿しますか？" }, class: "btn btn-primary btn-block btn-lg" %>
+    <% end %>
 </div>
+
