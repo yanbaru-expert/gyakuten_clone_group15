@@ -8,15 +8,14 @@
         <%= markdown(detail).html_safe %>
     </div>
 
-    <h3>【回答】</h3>
-        <ul>
-            <% @question.solutions.each do |solution| %>
-                <li>
+    <h3>回答投稿</h3>
+            <% @question.solutions.each.with_index(1) do |solution, i| %>
+                <div class="answer-text">
+                <p>【回答<%=i%>】</p>
                     <% answer = solution.answer %>
-                    <%= markdown(answer).html_safe %>
-                </li>
+                   <p> <%= markdown(answer).html_safe %> </p>
+                </div>
             <% end%>
-        </ul>
 
     <%= form_with model: [@question, @question.solutions.build], local: true do |f| %>
         <div class="form-group">
