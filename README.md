@@ -8,12 +8,14 @@
 
 Ruby 2.7.2 をインストールされていない場合は以下を実行して下さい。Rubyのバージョンごとにrailsをインストールする必要があります。
 
+【補足】もしRubyのデフォルトバージョンを変更したくない方は，クローンしたアプリのルートディレクトリまで移動した後 `rbenv global 2.7.2` 以外を実行して下さい。
+
 ```
 cd
 brew update
 brew upgrade rbenv ruby-build
 rbenv install 2.7.2
-rbenv local 2.7.2
+rbenv global 2.7.2
 gem install rails
 ```
 
