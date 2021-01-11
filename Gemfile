@@ -18,7 +18,7 @@ gem 'rails-i18n'
 
 gem 'kaminari'
 
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'coderay'
 
 
